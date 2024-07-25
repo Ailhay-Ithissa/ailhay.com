@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <video autoplay muted loop src="videos/stars.mp4"></video>
+    <head>
+        <img src="images/earth.gif" style="margin-top:11px;" align="left" height="71" border="2">
+        <title>Ailhay</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js"></script>
+    </head>
+    <body onload="onPageLoaded()" class="chart" style="margin-left: 240px">
+        
+        <div class="p1">
+            <h1><b id="rainbow">&nbsp;ailhay.com</b></h1>
+            <b class="smallMargins">&nbsp;&nbsp;&nbsp;music - status:</b>
+            <p class="smallMargins2">&nbsp;&nbsp;&nbsp;songs are cool</p>
+            
+            <table >
+                <thead>
+                    <tr>
+                        <th><a href="./index">home</a></th>
+                        <th><a href="./art">art</a></th>
+                        <th><a href="./gaming">gaming</a></th>
+                        <th>* <a href="./music">music</a></th>
+                        <th style="width:100px;height:20px;"><audio controls loop autoplay id="audioA" style="height:50%;width:50%;">
+                            <source src="audio/abracadabra.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                            </audio> </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="p1" class="chart"><br>
+			<h1>> PLEASE SUPPORT THE ARTISTS IF YOU HAVE MEANS TO!</h1><br><br>
+			<h2>> Demetori: </h2>
+			<img src="images/demetori.png" width=200><br>
+			<a href="https://drive.google.com/file/d/16JdkTEsBBvZbfMgx_PkNckmICy-0EWMV/view">[Google Drive]</a><br>
+			<a href="https://open.spotify.com/playlist/38fOrokb1z1iphMvrbNNUl?si=5d10d41448854d14">[Spotify]</a>
+			
+        </div>
+        <object data="nav.html" class="moveToLeft"></object>
+        <script>
+            let aud = document.getElementById("audioA");
+                aud.volume = 0.1; 
+                aud.autoplay = true;
+                aud.loop = true;
+        </script>
+    </body>
+</html>
