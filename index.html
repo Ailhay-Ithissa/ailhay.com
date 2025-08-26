@@ -13,7 +13,7 @@
             <h1><b id="rainbow">&nbsp;ailhay.com</b></h1>
             <b class="smallMargins">&nbsp;&nbsp;&nbsp;home - status:</b>
             <p class="smallMargins2">&nbsp;&nbsp;&nbsp;join the discord, <a href="https://discord.com/invite/qucmDKdnkT">hAil's hub</a>!</p>
-            
+
             <table >
                 <thead>
                     <tr>
@@ -21,10 +21,7 @@
                         <th><a href="./art">art</a></th>
                         <th><a href="./gaming">gaming</a></th>
                         <th><a href="./music">music</a></th>
-                        <th style="width:100px;height:20px;"><audio controls loop autoplay id="audioA" style="height:50%;width:50%;">
-                            <source src="audio/abracadabra.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                            </audio> </th>
+                        <th style="width:100px;height:20px;"><button onclick="playAudio()">play</button></th>
                     </tr>
                 </thead>
             </table>
@@ -43,15 +40,10 @@
                 > Mostly just have the site so I have a central point for links and whatnot >:3
                 <br><br>
                 > contact: <a href= "mailto: ailhay+site@ailhay.com">[email]</a>
-                <br><br>
+                <br>
                 
-                <!-- <img src="images/chao.gif"> -->
-                
-                
-                <h2 style="color: slateblue" id="dance">code credit:</h2>
-                > homepage rainbow cursor: <a href="https://github.com/tholman/cursor-effects">[cursor-effects]</a><br>
-                > Lots of stuff: <a href="https://insect.christmas">insect.christmas</a> <a href="https://github.com/astridztar/insectchristmas/tree/main">(github)</a>
-            <br>
+                <img src="images/chao.gif" width="50">
+
             
             <a><img src="images/halloweenBar.gif"></a>
             
@@ -115,20 +107,13 @@
               }
               return color;
             }
-            
+
             // make sure audio does not earrape
-            let aud = document.getElementById("audioA");
+            let aud = document.getElementById("audio");
                 aud.volume = 0.1; 
                 aud.autoplay = true;
                 aud.loop = true;
                 
-
-        </script>
-        <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
-        <script type="module">
-          
-            window.addEventListener("load", (event) => { new cursoreffects.rainbowCursor(); });
-        </script>
     </body>
 
 </html>
