@@ -5,7 +5,7 @@ body {
 /* Using flex with the column direction to
    align items in a vertical direction */
 .player {
-  height: 95vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -17,7 +17,7 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 100px;
 }
 
 .track-art {
@@ -37,11 +37,13 @@ body {
 }
 
 .track-name {
-  font-size: 3rem;
+  text-align: center;
+  vertical-align: middle;  
+  font-size: 1.5rem;
 }
 
 .track-artist {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 /* Using flex with the row direction to
