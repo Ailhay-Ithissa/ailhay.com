@@ -56,7 +56,7 @@ function onPageLoaded() {
 	    path: "audio/Forest Chillin.mp3"
 	  },
 	  	  {
-	    name: "Good for Health, Bad for Imagination.mp3",
+	    name: "Good for Health, Bad for Imagination",
 	    artist: "Omori",
 	    path: "audio/Good for Health, Bad for Imagination.mp3"
 	  },
@@ -104,8 +104,8 @@ function onPageLoaded() {
 
 function loadTrack(track_index) {
   // Clear the previous seek timer
-  //clearInterval(updateTimer);
-  //resetValues();
+  clearInterval(updateTimer);
+  resetValues();
 
   // Load a new track
   curr_track.src = track_list[track_index].path;
@@ -117,11 +117,11 @@ function loadTrack(track_index) {
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
   //now_playing.textContent = 
-  //   "PLAYING " + (track_index + 1) + " OF " + track_list.length;
+     //"PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
   // Set an interval of 1000 milliseconds
   // for updating the seek slider
-  //updateTimer = setInterval(seekUpdate, 1000);
+  updateTimer = setInterval(seekUpdate, 1000);
 
   // Move to the next track if the current finishes playing
   // using the 'ended' event
@@ -168,8 +168,10 @@ function pauseTrack() {
 function nextTrack() {
   // Go back to the first track if the
   // current one is the last in the track list
+  
+  // this is replaced by the random underneath
   //if (track_index < track_list.length - 1)
-  //  track_index += 1;
+    //track_index += 1;
   //else track_index = 0;
   
   track_index = Math.floor(Math.random() * track_list.length);
@@ -217,7 +219,7 @@ function seekUpdate() {
   // Check if the current track duration is a legible number
   if (!isNaN(curr_track.duration)) {
     seekPosition = curr_track.currentTime * (100 / curr_track.duration);
-    seek_slider.value = seekPosition;
+    //seek_slider.value = seekPosition;
 
     // Calculate the time left and the total duration
     let currentMinutes = Math.floor(curr_track.currentTime / 60);
@@ -241,4 +243,4 @@ function seekUpdate() {
 // Load the first track in the tracklist
 setVolume();
 nextTrack();
-loadTrack(track_index);
+//loadTrack(track_index);
